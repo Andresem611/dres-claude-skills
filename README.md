@@ -1,37 +1,39 @@
-# Claude Code Sync Plugin
+# Dres Claude Skills Plugin
 
-Personal Claude Code configuration plugin for syncing skills, agents, and settings across devices.
+Personal Claude Code plugin for syncing skills and settings across devices.
+
+**GitHub:** https://github.com/Andresem611/dres-claude-skills
 
 ## Installation
 
-### On your main machine (where you already have your setup):
+### On your main machine:
 
-1. Initialize git repo:
-```bash
-cd ~/.claude-plugin-sync
-git init
-git add .
-git commit -m "Initial Claude Code config sync"
-git remote add origin https://github.com/YOUR-USERNAME/claude-code-sync.git
-git branch -M main
-git push -u origin main
-```
-
-2. Install the plugin locally:
+Plugin is already set up. Just install it:
 ```bash
 claude /plugin install ~/.claude-plugin-sync
+```
+
+Verify it loaded:
+```bash
+claude /plugin list
+# You should see "andres-sync" in the output
 ```
 
 ### On other devices (Replit, secondary machine, etc):
 
 1. Clone the repo:
 ```bash
-git clone https://github.com/YOUR-USERNAME/claude-code-sync.git ~/.claude-plugin-sync
+git clone https://github.com/Andresem611/dres-claude-skills.git ~/.claude-plugin-sync
 ```
 
 2. Install the plugin:
 ```bash
 claude /plugin install ~/.claude-plugin-sync
+```
+
+3. Verify:
+```bash
+claude /plugin list
 ```
 
 ## Keeping in Sync
@@ -71,20 +73,33 @@ Make executable: `chmod +x ~/.local/bin/claude-sync`
 
 Then just run: `claude-sync`
 
+## What's Included
+
+**30+ Skills:**
+- email-writing, humanizer, memory, todo-manager
+- thoven-boardroom, canopy, thoven-financials, thoven-notion-workflow
+- product-strategy-brainstorming, founder-first-principles-framework
+- call-prep, prompt-generator, research-orchestration
+- edtech-learning-science, customer-obsession-design-thinking
+- market-research-vc-intelligence, technical-spec-generator
+- testing-runbook-generator, skill-creator, subagent-creator
+- notion-workspace-executor, mama-frontend, remotion
+- And more...
+
+**Settings:**
+- Plugin preferences and configuration
+- Enabled MCP servers (GitHub, Notion, Sentry, etc.)
+
 ## Plugin Structure
 
 ```
 .claude-plugin/
 ├── plugin.json          # Plugin manifest
 ├── settings.json        # Claude Code settings
-├── mcp.json            # MCP server config (if needed)
-├── skills/             # Your custom skills
-│   ├── skill-name/
-│   │   ├── instructions.md
-│   │   └── [other files]
-│   └── ...
-└── agents/             # Your custom agents (if any)
-    ├── agent-name/
+└── skills/              # 30+ custom skills
+    ├── email-writing/
+    ├── thoven-boardroom/
+    ├── memory/
     └── ...
 ```
 
