@@ -1,0 +1,12 @@
+{
+  "name": "andres-sync",
+  "displayName": "Andres Personal Config Sync",
+  "description": "Personal skills, agents, and configuration synced across devices",
+  "version": "1.0.0",
+  "author": "Andres Martinez",
+  "repository": "https://github.com/andresmartinez/claude-code-sync",
+  "skillDirs": ["./skills"],
+  "agentDirs": ["./agents"],
+  "settings": "./settings.json",
+  "mcp": "./mcp.json"
+}

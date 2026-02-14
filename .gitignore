@@ -1,0 +1,25 @@
+# Local only
+node_modules/
+.env
+.env.local
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# System
+.DS_Store
+Thumbs.db
+
+# Claude cache (don't sync)
+.cache/
+*.jsonl
+
+# Sensitive
+*.key
+*.pem
